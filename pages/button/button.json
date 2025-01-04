@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "Button",
+  "navigationBarTitleText": "注册",
   "navigationBarBackgroundColor": "#fff",
   "usingComponents": {
     "base": "./base",
@@ -10,6 +10,8 @@
     "ghost-btn": "./ghost-btn",
     "shape": "./shape",
     "theme": "./theme",
-    "disabled": "./disabled"
+    "disabled": "./disabled",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-button": "tdesign-miniprogram/button/button"
   }
 }

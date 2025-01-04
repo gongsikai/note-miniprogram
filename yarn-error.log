@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add md5
+
+PATH: 
+  /Users/io/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Users/io/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/Users/io/anaconda3/bin:/Users/io/anaconda3/condabin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/io/_-_-_/bin:/usr/local/mysql-8.0.16-macos10.14-x86_64/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/io/_-_-_/bin:/usr/local/mysql-8.0.16-macos10.14-x86_64/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  20.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.npmmirror.com/md5: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:130201:19)
+      at listOnTimeout (node:internal/timers:573:17)
+      at process.processTimers (node:internal/timers:514:7)
+
+npm manifest: 
+  {
+    "name": "miniprogram-2",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "types": "./app.d.ts",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
