@@ -7,6 +7,10 @@ const base = {
             label: '按钮',
         },
         {
+            name: 'Note',
+            label: '笔记',
+        },
+        {
             name: 'Divider',
             label: '分割线',
         },

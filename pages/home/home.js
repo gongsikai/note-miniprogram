@@ -23,6 +23,7 @@ Page({
             });
             path = `/pages/${name}/${name}`;
         }
+        console.log('path', path)
         wx.navigateTo({
             url: path,
             fail: () => {

@@ -1,0 +1,80 @@
+<view class="demo">
+  <!-- <view wx:if="{{ token }}" class="button-group"> -->
+  <view wx:if="{{ !token }}">
+    <t-input model:value="{{ name }}" placeholder="用户名" />
+    <t-input model:value="{{ pass }}" placeholder="密码" />
+    <view class="button-group">
+      <!-- <t-button type="primary" block size="large">注册</t-button> -->
+      <t-button theme="light" block size="large" bindtap="bindTapAdd">注册</t-button>
+      <!-- <t-button type="primary" block size="large">登录</t-button> -->
+      <t-button theme="primary" block size="large" bind:tap="bindTapLogin">登录</t-button>
+      <text>{{ token }}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="title-wrap">
+      <text class="title">龚思凯笔记</text>
+    </view>
+    <view>
+      <t-button bind:tap="bindTabLogout">退出登录</t-button>
+    </view>
+    <view>
+      <t-input model:value="{{ noteContent }}" placeholder="请输入笔记内容" />
+      <t-button bind:tap="bindTabSave">保存笔记</t-button>
+    </view>
+    <!-- <view wx:for="{{ item in noteList }}"> -->
+    <view wx:for="{{ noteList }}">
+      <view class="options">
+        <t-button class="modify">编辑</t-button>
+        <t-button data-uuid="{{ item.uuid }}" class="delete" bindtap="bindTabDelete">删除</t-button>
+      </view>
+      <view>
+        <text>{{ item.create_time }} 1</text>
+      </view>
+      <view>
+        <!-- <text>{{ decodeURIComponent(item.content) }} 1</text>
+        <text>{{ methodsDecodeURIComponent(item.content) }} 1</text> -->
+        <!-- <text>{{ item.content }}</text> -->
+        <rich-text>{{ item.content }}</rich-text>
+      </view>
+    </view>
+  </view>
+
+  <view class="demo-title">Button 按钮</view>
+  <view class="demo-desc">用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</view>
+  <t-demo title="01 组件类型" desc="基础按钮">
+    <base />
+  </t-demo>
+
+  <t-demo desc="图标按钮">
+    <icon-btn />
+  </t-demo>
+
+  <t-demo desc="幽灵按钮">
+    <ghost-btn />
+  </t-demo>
+
+  <t-demo desc="组合按钮">
+    <group-btn />
+  </t-demo>
+
+  <t-demo desc="通栏按钮">
+    <block-btn />
+  </t-demo>
+
+  <t-demo title="02 组件状态" desc="按钮禁用态">
+    <disabled />
+  </t-demo>
+
+  <t-demo title="03 组件样式" desc="按钮尺寸">
+    <size />
+  </t-demo>
+
+  <t-demo desc="按钮形状">
+    <shape />
+  </t-demo>
+
+  <t-demo desc="按钮主题">
+    <theme />
+  </t-demo>
+</view>
