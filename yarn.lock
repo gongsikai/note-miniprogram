@@ -31,6 +31,11 @@ md5@^2.3.0:
     crypt "0.0.2"
     is-buffer "~1.1.6"
 
+moment@^2.30.1:
+  version "2.30.1"
+  resolved "https://registry.npmmirror.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
+  integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
+
 tdesign-miniprogram@^1.8.4:
   version "1.8.4"
   resolved "https://registry.npmmirror.com/tdesign-miniprogram/-/tdesign-miniprogram-1.8.4.tgz#98810b40ef012175cfbd8759e7aaa34e76eda633"

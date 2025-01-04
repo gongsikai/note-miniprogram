@@ -7,4 +7,7 @@ App({
             });
         }
     },
+    globalData: {
+      token: wx.getStorageSync('item')
+    }
 });

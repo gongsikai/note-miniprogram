@@ -7,3 +7,18 @@ page {
   grid-template-columns: repeat(2, 1fr);
   gap: 32rpx;
 }
+.title-wrap {
+  text-align: center;
+}
+.title {
+  text-align: center;
+}
+.options {
+  padding: 10px 20px;
+}
+.modify {
+  padding: 10px 20px;
+}
+.delete {
+  padding: 10px 0px 10px 0px;
+}
