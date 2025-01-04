@@ -16,20 +16,29 @@
       <text class="title">龚思凯笔记</text>
     </view>
     <view>
-      <t-button bind:tap="bindTabLogout">退出登录</t-button>
+      <!-- <t-button bind:tap="bindTabLogout">退出登录</t-button> -->
+      <t-button bind:tap="bindTapLogout">退出登录</t-button>
     </view>
     <view>
       <t-input model:value="{{ noteContent }}" placeholder="请输入笔记内容" />
-      <t-button bind:tap="bindTabSave">保存笔记</t-button>
+      <!-- <t-button bind:tap="bindTabSave">保存笔记</t-button> -->
+      <t-button bind:tap="bindTapSave">保存笔记</t-button>
     </view>
     <!-- <view wx:for="{{ item in noteList }}"> -->
     <view wx:for="{{ noteList }}">
       <view class="options">
-        <t-button class="modify">编辑</t-button>
-        <t-button data-uuid="{{ item.uuid }}" class="delete" bindtap="bindTabDelete">删除</t-button>
+        <!-- <t-button class="modify">编辑</t-button> -->
+        <t-button wx:if="{{ !item.editable }}" class="modify" data-index="{{ index }}" bind:tap="bindTapEdit">编辑</t-button>
+        <t-button wx:if="{{ item.editable }}" class="cancel-modify" data-index="{{ index }}" bind:tap="bindTapEditCancel">取消编辑</t-button>
+        <t-button wx:if="{{ item.editable }}" class="save-modify" data-editvalue="{{ item.editvalue }}" bind:tap="bindTapEditSave">保存编辑</t-button>
+        <!-- <t-button data-uuid="{{ item.uuid }}" class="delete" bindtap="bindTabDelete">删除</t-button> -->
+        <t-button data-uuid="{{ item.uuid }}" class="delete" bindtap="bindTapDelete">删除</t-button>
       </view>
       <view>
-        <text>{{ item.create_time }} 1</text>
+        <!-- <text>{{ item.create_time }} 1</text> -->
+        <text wx:if="{{ !item.editable }}">{{ item.create_time }}</text>
+        <!-- <textarea data-content="{{ item.content }}" wx:else model:value="{{ item.content }}"></textarea> -->
+        <textarea data-index="{{ index }}" wx:else bindinput="bindInputTextarea" value="{{ item.editvalue }}"></textarea>
       </view>
       <view>
         <!-- <text>{{ decodeURIComponent(item.content) }} 1</text>
